@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  border-bottom: 8px solid #222;
+}
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 68.75rem;
+  height: 25rem;
+  background-color: black;
+  color: white;
+}
+
+.cardContainerReverse {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  max-width: 68.75rem;
+  height: 25rem;
+  background-color: black;
+  color: white;
+}
+
+.cardContainerReverse > .content {
+  padding: 0 0 0 3em;
+}
+
+.title {
+  font-size: 3.125em;
+}
+
+.subTitle {
+  font-size: 1.625em;
+}
+
+.content {
+  display: block;
+  width: 55%;
+  padding: 0 3em 0 0;
+}
+
+.image {
+  object-fit: contain;
+  width: 18rem;
+  max-height: 20rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .cardContainer {
+    font-size: 12px;
+    flex-direction: column;
+    height: 50em;
+  }
+  .cardContainerReverse {
+    font-size: 12px;
+    flex-direction: column;
+    height: 50em;
+  }
+
+  .content {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .title {
+    padding: 0 1em;
+  }
+
+  .subTitle {
+    padding: 0 5em;
+  }
+}
