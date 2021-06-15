@@ -1,5 +1,6 @@
 .app {
   height: 100vh;
   background-color: black;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }

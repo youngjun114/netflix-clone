@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   max-width: 68.75rem;
-  height: 25rem;
+  height: 30rem;
   background-color: black;
   color: white;
 }
@@ -21,45 +21,43 @@
   align-items: center;
   justify-content: center;
   max-width: 68.75rem;
-  height: 25rem;
+  height: 30rem;
   background-color: black;
   color: white;
 }
 
 .cardContainerReverse > .content {
-  padding: 0 0 0 3em;
+  padding: 0 0 0 3rem;
 }
 
 .title {
-  font-size: 3.125em;
+  font-size: 3.125rem;
 }
 
 .subTitle {
-  font-size: 1.625em;
+  font-size: 1.625rem;
 }
 
 .content {
   display: block;
   width: 55%;
-  padding: 0 3em 0 0;
+  padding: 0 3rem 0 0;
 }
 
 .image {
   object-fit: contain;
-  width: 18rem;
+  width: 20rem;
   max-height: 20rem;
 }
 
 @media screen and (max-width: 1000px) {
   .cardContainer {
-    font-size: 12px;
     flex-direction: column;
-    height: 50em;
+    height: 40rem;
   }
   .cardContainerReverse {
-    font-size: 12px;
     flex-direction: column;
-    height: 50em;
+    height: 40rem;
   }
 
   .content {
@@ -69,10 +67,10 @@
   }
 
   .title {
-    padding: 0 1em;
+    padding: 0 1rem;
   }
 
   .subTitle {
-    padding: 0 5em;
+    padding: 0 5rem;
   }
 }

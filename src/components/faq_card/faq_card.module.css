@@ -1,0 +1,42 @@
+.container {
+  display: block;
+  background-color: rgb(48, 48, 48);
+  width: 50rem;
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  display: flex;
+  background-color: rgb(48, 48, 48);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: none;
+  height: 5rem;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+.button > h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: white;
+}
+
+.icon {
+  color: white;
+  font-size: 4rem;
+}
+
+.body {
+  font-size: 1.75rem;
+  margin: 0;
+  color: white;
+  white-space: pre-line;
+  border-top: 1px solid grey;
+  padding: 2rem 1rem;
+}
+
+.bodyCollapse {
+  display: none;
+}

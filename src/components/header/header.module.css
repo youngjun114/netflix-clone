@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 6.25rem;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  z-index: 1000;
+}
+
+.headerLeft {
+  flex: 0.8;
+  margin-left: 3.5rem;
+}
+
+.headerRight {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0.2;
+  margin-right: 3.5rem;
+  width: 100%;
+}
+
+.logo {
+  object-fit: fill;
+  height: 7rem;
+}
+
+.language {
+  color: white;
+  background-color: transparent;
+  margin: 0 2rem;
+  height: 2.5rem;
+  width: 6.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.button {
+  color: white;
+  background-color: red;
+  border: none;
+  height: 2.5rem;
+  width: 6.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
