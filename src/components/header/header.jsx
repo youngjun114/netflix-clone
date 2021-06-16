@@ -1,7 +1,12 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import styles from './header.module.css';
 
 const Header = () => {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push('/login');
+  };
   return (
     <nav className={styles.header}>
       <div className={styles.headerLeft}>
@@ -12,7 +17,9 @@ const Header = () => {
           <option>English</option>
           <option>Español</option>
         </select>
-        <button className={styles.button}>Sign in</button>
+        <button className={styles.button} onClick={handleClick}>
+          Sign in
+        </button>
       </div>
     </nav>
   );

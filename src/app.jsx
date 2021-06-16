@@ -1,16 +1,24 @@
 import React from 'react';
-import Jumbotron from './components/jumbotron/jumbotron';
-import Header from './components/header/header';
-import Banner from './components/banner/banner';
+import Home from './components/home/home';
+import Login from './components/login/login';
+import Signup from './components/sign_up/sign_up';
 import styles from './app.module.css';
 import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className={styles.app}>
-      <Header />
-      <Banner />
-      <Jumbotron />
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/login'>
+          <Login />
+        </Route>
+        <Route path='/signup'>
+          <Signup />
+        </Route>
+      </Switch>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './faq.module.css';
 import faq from '../../fixtures/faq.json';
 import FaqCard from '../faq_card/faq_card';

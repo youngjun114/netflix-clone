@@ -1,0 +1,156 @@
+:root {
+  --banner: url('https://assets.nflxext.com/ffe/siteui/vlv3/c0a32732-b033-43b3-be2a-8fee037a6146/4b723240-7bae-4ffe-96d0-91fba08c69ee/US-en-20210607-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+}
+
+.loginHeader {
+  width: 100%;
+  height: 6rem;
+  position: relative;
+  z-index: 1000;
+  margin-left: 2rem;
+  position: fixed;
+}
+
+.logo {
+  max-height: 5em;
+  object-fit: contain;
+}
+
+.layout {
+  background: rgba(0, 0, 0, 0.4);
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(0, 0, 0, 0.8)),
+      color-stop(60%, rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0.8))
+    ),
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    var(--banner);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.loginContainer {
+  display: flex;
+  position: relative;
+  top: 10em;
+  flex-direction: column;
+  width: 30em;
+  height: 40em;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2.5em 2.5em;
+}
+
+.loginContainer > h1 {
+  font-size: 2.25em;
+  color: white;
+}
+
+.loginContainer > span {
+  margin-top: 2em;
+  color: #737373;
+}
+
+.loginContainer > span > a {
+  text-decoration: none;
+  color: white;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inputContainer {
+  width: 100%;
+  position: relative;
+}
+
+.inputContainer > label {
+  color: white;
+  position: absolute;
+  top: 1.25em;
+  left: 1em;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.inputContainer > input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3em;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  background-color: rgb(51, 51, 51);
+  border: none;
+  font-size: 1.25em;
+  border-radius: 5px;
+  color: white;
+  position: relative;
+}
+
+.inputContainer > input:focus + label {
+  top: 0;
+  font-size: 0.85em;
+}
+.button {
+  padding: 0;
+  border: none;
+  color: white;
+  background: #e50914;
+  width: 100%;
+  height: 3em;
+  border-radius: 5px;
+  font-size: 1.25em;
+  cursor: pointer;
+  margin-top: 1.5em;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    background: black;
+    display: flex;
+    justify-content: center;
+  }
+
+  .loginContainer {
+    justify-content: flex-start;
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    top: 0;
+    left: 0;
+    margin: 5rem 5rem;
+    transform: translate(0, 0);
+  }
+
+  .loginForm > input {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    border: none;
+    color: black;
+    outline: none;
+  }
+
+  .loginForm > label {
+    color: black;
+    position: relative;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+}

@@ -23,25 +23,28 @@
 
 .logo {
   object-fit: fill;
-  height: 7rem;
+  height: 6rem;
 }
 
 .language {
   color: white;
   background-color: transparent;
   margin: 0 2rem;
-  height: 2.5rem;
+  height: 2.25rem;
   width: 6.5rem;
   font-size: 1.25rem;
   font-weight: bold;
+  border-radius: 5%;
 }
 
 .button {
   color: white;
-  background-color: red;
+  background-color: #e50914;
   border: none;
-  height: 2.5rem;
+  height: 2.25rem;
   width: 6.5rem;
   font-size: 1.25rem;
   font-weight: bold;
+  border-radius: 5%;
+  cursor: pointer;
 }
