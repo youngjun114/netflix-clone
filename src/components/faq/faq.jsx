@@ -8,7 +8,7 @@ const Faq = () => {
     <div className={styles.container}>
       <h1>Frequently Asked Questions</h1>
       {faq.map((question) => {
-        return <FaqCard question={question} />;
+        return <FaqCard key={question.id} question={question} />;
       })}
       <h3>
         Ready to watch? Enter your email to create or restart your membership.

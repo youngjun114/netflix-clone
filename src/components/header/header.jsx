@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import styles from './header.module.css';
 
 const Header = () => {
   const history = useHistory();
+
   const handleClick = () => {
-    history.push('/login');
+    history.push('/home');
   };
+
   return (
     <nav className={styles.header}>
       <div className={styles.headerLeft}>

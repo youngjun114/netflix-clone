@@ -1,14 +1,14 @@
-import React from 'react';
-import Jumbotron from '../jumbotron/jumbotron';
-import Banner from '../banner/banner';
-import Header from '../header/header';
+import React, { useState } from 'react';
+import films from '../../fixtures/movies.json';
+import MainHeader from '../main_header/main_header';
+import styles from './home.module.css';
+import { Link } from 'react-router-dom';
+
 const Home = () => {
   return (
-    <>
-      <Header />
-      <Banner />
-      <Jumbotron />
-    </>
+    <div className={styles.home}>
+      <MainHeader />
+    </div>
   );
 };
 

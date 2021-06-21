@@ -1,12 +1,36 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './sign_up.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { useAuth } from '../../context/auth_context';
 
 const Signup = () => {
   const formRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
+  const { signup } = useAuth();
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const history = useHistory();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+      return setError('Passwords do not match');
+    }
+
+    try {
+      setError('');
+      setLoading(true);
+      await signup(emailRef.current.value, passwordRef.current.value);
+      formRef.current.reset();
+      history.push('/home');
+    } catch {
+      setError('Failed to create an account');
+    }
+    setLoading(false);
+  };
+
   return (
     <div className={styles.signUp}>
       <div className={styles.signUpHeader}>
@@ -14,8 +38,13 @@ const Signup = () => {
         <Link to='/login'>Sign In</Link>
       </div>
       <div className={styles.formContainer}>
+        {error && <div className={styles.alert}>{error}</div>}
         <h3>Create your account</h3>
-        <form ref={formRef} className={styles.signUpForm}>
+        <form
+          ref={formRef}
+          className={styles.signUpForm}
+          onSubmit={handleSubmit}
+        >
           <input
             ref={emailRef}
             className={styles.email}
@@ -37,7 +66,7 @@ const Signup = () => {
             placeholder='Confirm password'
             required
           />
-          <button className={styles.button} type='submit'>
+          <button disabled={loading} className={styles.button} type='submit'>
             Sign Up
           </button>
         </form>
