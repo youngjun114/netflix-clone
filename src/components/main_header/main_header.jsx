@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './main_header.module.css';
 import { useHistory } from 'react-router';
 import { useAuth } from '../../context/auth_context';
@@ -8,6 +8,7 @@ import { IoIosNotifications } from 'react-icons/io';
 
 const MainHeader = () => {
   const [error, setError] = useState('');
+  const [scroll, setScroll] = useState(false);
   const { logout } = useAuth();
   const history = useHistory();
 
@@ -22,8 +23,18 @@ const MainHeader = () => {
     }
   };
 
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeBackground);
+
   return (
-    <nav className={styles.header}>
+    <nav className={scroll ? styles.header.active : styles.header}>
       <div className={styles.headerLeft}>
         <img className={styles.logo} src='images/misc/logo.png' alt='logo' />
         <div className={styles.headerLinks}>

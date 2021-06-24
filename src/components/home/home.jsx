@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import films from '../../fixtures/movies.json';
 import MainHeader from '../main_header/main_header';
+import MainBanner from '../main_banner/main_banner';
 import styles from './home.module.css';
-import { Link } from 'react-router-dom';
+import VideoList from '../video_list/video_list';
+import requests from '../../service/fetch_url';
 
 const Home = () => {
   return (
-    <div className={styles.home}>
+    <>
       <MainHeader />
-    </div>
+      <MainBanner fetchUrl={requests.fetchNetflix} />
+      <section>
+        <VideoList label='Only On Netflix' fetchUrl={requests.fetchNetflix} />
+      </section>
+    </>
   );
 };
 

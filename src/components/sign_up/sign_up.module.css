@@ -28,7 +28,7 @@
 }
 
 .formContainer {
-  width: 30rem;
+  width: 35rem;
   margin-top: 3rem;
 }
 
@@ -44,7 +44,7 @@
   height: 3.25rem;
   border-radius: 7.5px;
   outline: none;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .button {

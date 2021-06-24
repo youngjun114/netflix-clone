@@ -15,14 +15,18 @@
   width: 100%;
   background-color: transparent;
   position: fixed;
+  padding: 0 2rem;
+  font-size: 1.25rem;
   z-index: 1000;
-  padding: 0 2em;
-  font-size: 16px;
+}
+
+.header.active {
+  background-color: #282828;
 }
 
 .logo {
-  object-fit: fill;
-  height: 3.5em;
+  object-fit: contain;
+  height: 4rem;
 }
 
 .headerLeft {
@@ -38,6 +42,7 @@
 .headerRight {
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .searchButton {
@@ -47,7 +52,7 @@
 }
 
 .notification {
-  font-size: 2em;
+  font-size: 2.5rem;
 }
 
 .searchIcon {
@@ -65,13 +70,13 @@
 }
 
 .userIcon {
-  height: 2.5em;
+  height: 2.5rem;
   border-radius: 15%;
 }
 
 .arrow {
   color: white;
-  font-size: 1em;
+  font-size: 1.25rem;
   margin-left: 5px;
   transition: 200ms;
 }
@@ -80,17 +85,17 @@
   display: none;
   color: white;
   position: absolute;
-  top: 60px;
-  right: 60px;
-  font-size: 2em;
+  top: 3.5rem;
+  right: 4.1rem;
+  font-size: 2rem;
 }
 
 .accountDropdown {
   display: none;
   position: absolute;
   width: 12em;
-  top: 56px;
-  right: 65px;
+  top: 3rem;
+  right: 4.55rem;
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid #888888;
   z-index: 1;
@@ -99,22 +104,23 @@
 }
 
 .accountDropdown > li {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 2.5em;
-  background-color: transparent;
-  width: 100%;
-  padding-left: 1em;
-  font-weight: bold;
+  height: 2.5rem;
 }
 
 .accountDropdown > li > button {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border: none;
   color: white;
-  font-size: 1em;
+  font-size: 1.25rem;
   cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.accountDropdown > li > button:hover {
+  background-color: #888888;
 }
 
 .header > * a:hover {

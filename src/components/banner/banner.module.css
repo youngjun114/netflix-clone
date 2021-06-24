@@ -36,7 +36,7 @@
 
 .container {
   text-align: center;
-  padding: 0 8.5rem;
+  width: 50rem;
   height: 50%;
 }
 
@@ -59,14 +59,13 @@
 
 .email {
   display: flex;
-  height: 4.25rem;
   justify-content: center;
   align-items: center;
 }
 
 .email > input {
   width: 30rem;
-  height: 100%;
+  height: 4rem;
   font-size: 1.25rem;
   padding: 0 0 0 0.5rem;
   outline: none;
@@ -76,7 +75,7 @@
   background-color: red;
   color: white;
   width: 8.5rem;
-  height: 4.25rem;
+  height: 4rem;
   font-size: 1.25rem;
   padding: 0 0.5rem;
   cursor: pointer;

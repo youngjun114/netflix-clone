@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.list::-webkit-scrollbar {
+  width: 0;
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  line-height: 1rem;
+}
