@@ -1,0 +1,15 @@
+.posterContainer {
+  margin-right: 0.5rem;
+}
+
+.poster {
+  max-height: 100px;
+  width: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.poster:hover {
+  transform: scale(1.25);
+}

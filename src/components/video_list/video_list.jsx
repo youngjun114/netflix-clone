@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import VideoLarge from '../video_large/video_large';
+import VideoItem from '../video_item/video_item';
 import styles from './video_list.module.css';
 
-const VideoList = ({ label, fetchUrl }) => {
+const VideoList = ({ label, fetchUrl, isLarge }) => {
   const [movies, setMovies] = useState([]);
   useEffect(async () => {
     const requestOptions = {
@@ -21,7 +21,7 @@ const VideoList = ({ label, fetchUrl }) => {
       <h1 className={styles.title}>{label}</h1>
       <div className={styles.list}>
         {movies.map((movie) => {
-          return <VideoLarge key={movie.id} video={movie} />;
+          return <VideoItem key={movie.id} video={movie} isLarge={isLarge} />;
         })}
       </div>
     </section>

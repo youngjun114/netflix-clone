@@ -1,0 +1,122 @@
+.posterLarge {
+  width: 13vw;
+  object-fit: contain;
+  cursor: pointer;
+  transition: 500ms;
+  margin-right: 10px;
+  padding: 20px 0;
+}
+
+.posterSmall {
+  width: 13vw;
+  padding: 20px 0;
+  object-fit: contain;
+  cursor: pointer;
+  transition: 500ms;
+  margin-right: 10px;
+}
+
+.posterLarge:hover,
+.posterSmall:hover {
+  transform: scale(1.25);
+}
+
+.posterLarge:hover + .videoDesc {
+  visibility: visible;
+  opacity: 1;
+}
+
+.videoDesc {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 17vw;
+  top: 60%;
+  z-index: 1;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.buttons > button:nth-child(3) {
+  margin-left: auto;
+}
+
+.play,
+.plus {
+  border-radius: 50%;
+  font-size: 2.5rem;
+}
+
+.play {
+  background-color: white;
+  color: black;
+}
+
+.plus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.down {
+  background: rgba(109, 109, 110, 0.4);
+  border-radius: 50%;
+  font-size: 3rem;
+  border: 0px;
+  color: white;
+}
+
+.title {
+  font-size: 2rem;
+  color: white;
+  margin: 0.5rem 0;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 1rem;
+}
+
+.genres > span:not(:last-child):after {
+  content: ' • ';
+}
+
+/* medium devices */
+@media (max-width: 1200px) {
+  .posterLarge,
+  .posterSmall,
+  .videoDesc {
+    width: 20vw;
+  }
+}
+
+/* small devices */
+@media (max-width: 992px) {
+  .posterLarge,
+  .posterSmall,
+  .videoDesc {
+    width: 25vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .posterLarge,
+  .posterSmall,
+  .videoDesc {
+    width: 33vw;
+  }
+}

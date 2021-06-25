@@ -10,9 +10,15 @@ const Home = () => {
     <>
       <MainHeader />
       <MainBanner fetchUrl={requests.fetchNetflix} />
-      <section>
-        <VideoList label='Only On Netflix' fetchUrl={requests.fetchNetflix} />
-      </section>
+      <VideoList
+        isLarge={true}
+        label='Only On Netflix'
+        fetchUrl={requests.fetchNetflix}
+      />
+      <VideoList label='Trending' fetchUrl={requests.fetchTrending} />
+      <VideoList label='Comedy' fetchUrl={requests.fetchComedy} />
+      <VideoList label='Action' fetchUrl={requests.fetchAction} />
+      <VideoList label='Animation' fetchUrl={requests.fetchAnimation} />
     </>
   );
 };

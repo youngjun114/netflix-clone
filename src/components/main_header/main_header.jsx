@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import styles from './main_header.module.css';
 import { useHistory } from 'react-router';
 import { useAuth } from '../../context/auth_context';
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { FaSearch, FaSortDown, FaSortUp } from 'react-icons/fa';
 import { IoIosNotifications } from 'react-icons/io';
 
-const MainHeader = () => {
+const MainHeader = memo(() => {
   const [error, setError] = useState('');
   const [scroll, setScroll] = useState(false);
   const { logout } = useAuth();
@@ -24,7 +24,7 @@ const MainHeader = () => {
   };
 
   const changeBackground = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 200) {
       setScroll(true);
     } else {
       setScroll(false);
@@ -34,7 +34,9 @@ const MainHeader = () => {
   window.addEventListener('scroll', changeBackground);
 
   return (
-    <nav className={scroll ? styles.header.active : styles.header}>
+    <nav
+      className={scroll ? `${styles.header} ${styles.active}` : styles.header}
+    >
       <div className={styles.headerLeft}>
         <img className={styles.logo} src='images/misc/logo.png' alt='logo' />
         <div className={styles.headerLinks}>
@@ -80,6 +82,6 @@ const MainHeader = () => {
       </div>
     </nav>
   );
-};
+});
 
-export default MainHeader;
+export default memo(MainHeader);

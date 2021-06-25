@@ -1,14 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.5rem 0.5rem;
+}
+
 .list {
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .list::-webkit-scrollbar {
-  width: 0;
+  display: none;
 }
 
 .title {
   color: white;
   font-size: 2rem;
-  line-height: 1rem;
+  line-height: 1.5rem;
 }

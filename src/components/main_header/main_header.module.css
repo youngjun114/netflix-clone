@@ -17,11 +17,12 @@
   position: fixed;
   padding: 0 2rem;
   font-size: 1.25rem;
+  transition: 250ms;
   z-index: 1000;
 }
 
-.header.active {
-  background-color: #282828;
+.active {
+  background-color: rgba(0, 0, 1, 0.9);
 }
 
 .logo {
