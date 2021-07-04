@@ -7,18 +7,42 @@
 
 .list {
   display: flex;
+  align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
   position: relative;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 .list::-webkit-scrollbar {
   display: none;
 }
 
+.scrollLeft,
+.scrollRight {
+  position: sticky;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.scrollLeft {
+  left: 0;
+}
+
+.scrollRight {
+  right: 0;
+}
+
 .title {
   color: white;
   font-size: 2rem;
   line-height: 1.5rem;
+}
+
+.scrollIcon {
+  color: white;
+  font-size: 2rem;
 }

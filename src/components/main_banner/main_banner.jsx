@@ -16,10 +16,8 @@ const MainBanner = ({ fetchUrl }) => {
     await fetch(fetchUrl, requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.results);
         setMovie(data.results[1]);
       })
-      .then(console.log(movie))
       .catch((error) => console.log('error', error));
   }, [fetchUrl]);
 
