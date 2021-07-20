@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo, useState } from 'react';
 import styles from './main_header.module.css';
 import { useHistory } from 'react-router';
 import { useAuth } from '../../context/auth_context';

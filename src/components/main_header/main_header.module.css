@@ -68,6 +68,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 
 .userIcon {
@@ -86,8 +87,7 @@
   display: none;
   color: white;
   position: absolute;
-  top: 3.5rem;
-  right: 4.1rem;
+  transform: translate(10%, 100%);
   font-size: 2rem;
 }
 
@@ -95,8 +95,7 @@
   display: none;
   position: absolute;
   width: 12em;
-  top: 3rem;
-  right: 4.55rem;
+  transform: translate(-85%, -5%);
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid #888888;
   z-index: 1;

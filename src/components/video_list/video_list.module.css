@@ -23,6 +23,7 @@
 .scrollRight {
   position: sticky;
   background-color: rgba(0, 0, 0, 0.5);
+  height: 100px;
   border: none;
   z-index: 100;
   cursor: pointer;
@@ -45,4 +46,8 @@
 .scrollIcon {
   color: white;
   font-size: 2rem;
+}
+
+.hidden {
+  display: none;
 }

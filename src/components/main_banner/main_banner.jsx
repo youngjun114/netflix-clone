@@ -7,18 +7,21 @@ const MainBanner = ({ fetchUrl }) => {
   const [movie, setMovie] = useState([]);
   const baseUrl = 'https://image.tmdb.org/t/p/original/';
 
-  useEffect(async () => {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow',
-    };
+  useEffect(() => {
+    async function fetchData() {
+      const requestOptions = {
+        method: 'GET',
+        redirect: 'follow',
+      };
 
-    await fetch(fetchUrl, requestOptions)
-      .then((response) => response.json())
-      .then((data) => {
-        setMovie(data.results[1]);
-      })
-      .catch((error) => console.log('error', error));
+      await fetch(fetchUrl, requestOptions)
+        .then((response) => response.json())
+        .then((data) => {
+          setMovie(data.results[1]);
+        })
+        .catch((error) => console.log('error', error));
+    }
+    fetchData();
   }, [fetchUrl]);
 
   return (
