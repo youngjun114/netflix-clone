@@ -45,3 +45,11 @@ ___
 **Side-Scroll**
 
 ![netflix-side-scroll](https://user-images.githubusercontent.com/35579719/126303576-9d059ae4-93a8-42c0-b39c-0bc8214b4bc2.gif)
+
+### Reference
+
+These are references I got helped from when I got stuck:
+
+[Clever Programmer Youtube Video](https://www.youtube.com/watch?v=XtMThy8QKqU)
+
+[Web Dev Simplified Youtube Video](https://www.youtube.com/watch?v=PKwu15ldZ7k)
